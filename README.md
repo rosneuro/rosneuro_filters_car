@@ -1,4 +1,4 @@
-# ROSNeuro CAR filters
+# ROSNeuro CAR filter
 
 This ROSNeuro filter plugin implements a Common Average Reference filter to remove the average component from all data channels.
 
