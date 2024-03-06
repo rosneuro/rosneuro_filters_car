@@ -2,6 +2,7 @@
 #define ROSNEURO_FILTERS_CAR_HPP
 
 #include <Eigen/Dense>
+#include <gtest/gtest_prod.h>
 #include <rosneuro_filters/Filter.hpp>
 
 namespace rosneuro {
@@ -14,6 +15,7 @@ class Car : public Filter<T> {
 
 		bool configure(void);
 		DynamicMatrix<T> apply(const DynamicMatrix<T>& in);
+        FRIEND_TEST(CarTestSuite, TestCarName);
 
 };
 
