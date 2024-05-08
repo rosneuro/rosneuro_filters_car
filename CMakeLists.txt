@@ -48,7 +48,7 @@ catkin_package(
 # Build
 ##############################################################################
 
-catkin_add_gtest(TestFilterCar test/test_filter_car.cpp)
+catkin_add_gtest(TestFilterCar test/TestCar.cpp)
 target_link_libraries(TestFilterCar ${GTEST_BOTH_LIBRARIES} pthread gmock ${Eigen3_LIBRARIES})
 target_link_libraries(TestFilterCar ${PROJECT_NAME} ${catkin_LIBRARIES})
 include_directories(${GTEST_INCLUDE_DIRS} gmock pthread include include/${PROJECT_NAME}/)
@@ -67,7 +67,7 @@ target_link_libraries(${PROJECT_NAME} ${Eigen3_LIBRARIES}
 ## Executables ##
 #################
 
-add_executable(car_simloop_config test/car_simloop_config.cpp)
+add_executable(car_simloop_config example/car_simloop_config.cpp)
 target_link_libraries(car_simloop_config ${PROJECT_NAME} ${catkin_LIBRARIES}) 
 
 
